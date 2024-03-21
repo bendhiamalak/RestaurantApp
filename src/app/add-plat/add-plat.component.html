@@ -1,0 +1,133 @@
+<body>
+  <h1>Add New Dish</h1>
+  <div class="row">
+    <!-- Colonne pour les détails du plat -->
+    <div
+      class="column"
+      style="
+        background: #f0f0f0;
+        padding: 20px;
+        border-radius: 10px;
+        margin-right: 20px;
+      "
+    >
+      <section class="example-section">
+        <mat-form-field appearance="outline" style="width: 100%">
+          <mat-label>Dish Name</mat-label>
+          <input
+            matInput
+            name="name"
+            type="text"
+            [(ngModel)]="dish.name"
+            placeholder="Enter your dish name ..."
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%">
+          <mat-label>Number Of Points</mat-label>
+          <input
+            matInput
+            name="nbOfPoints"
+            type="number"
+            [(ngModel)]="dish.nbOfPoints"
+            placeholder="Enter number
+          of points ..."
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%">
+          <mat-label>Dish URL Image</mat-label>
+          <input
+            matInput
+            name="image"
+            type="text"
+            [(ngModel)]="dish.image"
+            placeholder="Enter Dish URL image
+          ..."
+          />
+        </mat-form-field>
+
+        <div
+          class="form-field"
+          style="display: flex; gap: 10px; margin-top: 20px"
+        >
+          <mat-checkbox class="example-margin">
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>Small Size</mat-label>
+              <input
+                matInput
+                name="price"
+                type="number"
+                [(ngModel)]="dish.priceLit"
+                placeholder="Enter the Price ..."
+              />
+            </mat-form-field>
+          </mat-checkbox>
+
+          <mat-checkbox class="example-margin">
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>Medium Size</mat-label>
+              <input
+                matInput
+                name="price"
+                type="number"
+                [(ngModel)]="dish.priceMed"
+                placeholder="Enter the Price ..."
+              />
+            </mat-form-field>
+          </mat-checkbox>
+
+          <mat-checkbox class="example-margin">
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>Large Size</mat-label>
+              <input
+                matInput
+                name="price"
+                type="number"
+                [(ngModel)]="dish.priceHig"
+                placeholder="Enter the Price ..."
+              />
+            </mat-form-field>
+          </mat-checkbox>
+        </div>
+
+        <mat-form-field
+          appearance="outline"
+          style="width: 100%; margin-top: 20px"
+        >
+          <mat-label>Dish Description</mat-label>
+          <textarea
+            matInput
+            name="description"
+            [(ngModel)]="dish.description"
+            placeholder="Enter description ..."
+            class="custom-textarea"
+            style="width: 100%"
+          ></textarea>
+        </mat-form-field>
+      </section>
+    </div>
+
+    <!-- Colonne pour la liste des ingrédients -->
+    <div
+      class="column"
+      style="background: #f0f0f0; padding: 20px; border-radius: 10px"
+    >
+      <h2>Liste des ingrédients</h2>
+      <div style="overflow-y: auto; max-height: 400px">
+        <mat-grid-list cols="3" rowHeight="100px">
+          <mat-grid-tile *ngFor="let ingredient of ingredientsStatic">
+            <div class="ingredient-info">
+              <mat-icon>{{ ingredient.icon }}</mat-icon>
+              <div>{{ ingredient.name }}</div>
+              <div>{{ ingredient.price | currency : "DT" }}</div>
+            </div>
+            <button mat-icon-button (click)="addIngredient(ingredient)">
+              <mat-icon>add</mat-icon>
+            </button>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+    </div>
+  </div>
+</body>

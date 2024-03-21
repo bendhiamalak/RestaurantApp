@@ -1,0 +1,39 @@
+.row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+  }
+  
+ 
+  
+  .ingredients-column {
+    flex: 1;
+  }
+  
+  .form-field {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .form-field p {
+    flex: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .description-field textarea {
+    min-height: calc(2.25rem + 12px); /* 2.25rem est la hauteur de la première ligne, ajustez si nécessaire */
+  }
+  
+  .custom-textarea {
+    width: 300px; /* Vous pouvez ajuster cette valeur selon vos besoins */
+  }
+  
