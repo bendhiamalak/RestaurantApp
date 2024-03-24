@@ -102,6 +102,7 @@ export class AddDishComponent {
   };
 
   
+  
   addIngredient(ingredient: Ingredient) {
     // Ajoute l'ingrédient à la liste des ingrédients de la dish
     this.dish.ingredients.push(ingredient);

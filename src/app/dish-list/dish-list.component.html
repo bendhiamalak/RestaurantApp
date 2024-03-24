@@ -1,0 +1,18 @@
+<div class="dish-card-container">
+  <mat-card
+    *ngFor="let dish of dishes"
+    class="dish-card d-flex justify-content-center align-items-center"
+  >
+    <mat-card-header>
+      <img mat-card-lg-image [src]="dish.imageUrl" alt="Dish Image" />
+    </mat-card-header>
+    <div class="dish-card-content">
+      <mat-card-title>{{ dish.name }}</mat-card-title>
+      <mat-card-subtitle>{{ dish.price }}</mat-card-subtitle>
+      <p>{{ dish.describtion }}</p>
+    </div>
+    <mat-card-actions class="dish-card-content">
+      <button type="button" class="add-button">Add</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

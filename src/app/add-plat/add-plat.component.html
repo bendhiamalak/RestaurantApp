@@ -23,7 +23,10 @@
           />
         </mat-form-field>
 
-        <mat-form-field appearance="outline" style="width: 100%">
+        <mat-form-field
+          appearance="outline"
+          style="width: 100%; color: blueviolet"
+        >
           <mat-label>Number Of Points</mat-label>
           <input
             matInput
@@ -51,6 +54,7 @@
           class="form-field"
           style="display: flex; gap: 10px; margin-top: 20px"
         >
+          <p>Unit Price</p>
           <mat-checkbox class="example-margin">
             <mat-form-field appearance="outline" style="width: 100%">
               <mat-label>Small Size</mat-label>
@@ -128,6 +132,9 @@
           </mat-grid-tile>
         </mat-grid-list>
       </div>
+      <button mat-raised-button color="primary" (click)="addDish()">
+        Add Dish
+      </button>
     </div>
   </div>
 </body>

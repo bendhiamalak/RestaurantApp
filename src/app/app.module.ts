@@ -10,11 +10,15 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatChipsModule} from '@angular/material/chips';
+import {MatCardModule} from '@angular/material/card';
 
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddPlatComponent } from './add-plat/add-plat.component';
 import { AddDishComponent } from './add-dish/add-dish.component';
+import { DishListComponent } from './dish-list/dish-list.component';
 
 
 
@@ -22,7 +26,8 @@ import { AddDishComponent } from './add-dish/add-dish.component';
   declarations: [
     AppComponent,
     AddPlatComponent,
-    AddDishComponent
+    AddDishComponent,
+    DishListComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,10 @@ import { AddDishComponent } from './add-dish/add-dish.component';
     MatIconModule,
     MatListModule,
     MatGridListModule,
-    MatChipsModule
+    MatChipsModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
